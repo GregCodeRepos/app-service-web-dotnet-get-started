@@ -5,7 +5,10 @@ jobs:
   job_1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: main
       - name: Azure Login
         uses: azure/login@v1
         with:
